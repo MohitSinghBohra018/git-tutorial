@@ -1,0 +1,106 @@
+Git Commands – Notes 
+---------------------------------------------------------
+=>   Configuration  section 
+git config --global user.name "Your Name"
+→ Sets your global Git username
+
+git config --global user.email "your@email.com"
+→ Sets your global Git email
+
+git config --list
+→ Shows all current Git config settings
+----------------------------------------------------------
+git help
+git help <command>
+→ Shows help for specific Git commands
+-----------------------------------------------------
+📁 Repository Initialization
+git init
+→ Creates a new Git repository or reinitializes an existing one
+
+📌 Git Status
+git status
+--------------------------------------------------------
+→ Displays the state of the working directory and staging area:
+✅ Staged File: Ready to commit (Green)
+⚠️ Unstaged File: Modified, not yet staged (Red)
+🆕 Untracked File: New file, needs to be added to staging (Red)  
+
+➕ Adding Files  1)
+git add <file-name>
+→ Adds specific file to staging
+
+git add -A   / git add .
+→ Adds all new/modified files to staging at once
+
+ Remove from Staging (Unstage)
+git rm --cached <file-name>
+→ Removes a file from staging area only
+
+Commit Changes
+git commit -m "your message"
+→ Commits all staged changes
+
+Note: Only staged files are committed. Commits remain in local repository.
+
+----------------------------------------------
+🌐 Remote Repository
+git remote add  origin <repo-url>
+→ Links your local repo to a remote one (e.g., GitHub)
+
+git remote -v - verify remote
+--------------------------------------------------------
+🚀 Push to Remote
+git push -u origin master/main
+→ Pushes your committed changes to the remote master branch
+
+git pull origin main --rebase   note : time of error u use that
+
+-----------------------------------------------------
+
+♻️ Restore File (Unstaged Changes)
+git restore <file-name>
+→ Restores file to last committed version
+
+↩️ Undo Changes in Local Repo
+git checkout -- <file-name>
+→ Reverts file to last committed state (older method)
+
+📜 Commit History
+git log
+→ Full commit history
+
+git log --oneline
+→ Compact summary of commits (useful for quick review)
+
+🔄 Pull Changes
+git pull
+→ Fetches and merges the latest changes from the remote repo
+
+🧳 Git Stash
+git stash
+→ Temporarily saves changes that are not ready to commit
+
+git stash apply
+→ Re-applies the last stashed changes
+------------------------------------------------------------------------------
+ Clone - cloning  a repo in our machine
+git clone <repo-url>
+→ Downloads an existing remote repository to your local system
+
+Steps to push the code:
+untracked - changed
+modified - changed
+staged - file is ready to commit
+unmodified- unchanged
+
+
+
+
+git branch - check branch
+git branch -m main
+
+git checkout branchname- to change branch
+git checkout -b br1 	-crate branch
+git branch -d br1 -delete  branch
+git push origin branchname
